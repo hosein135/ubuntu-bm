@@ -108,6 +108,7 @@ printf "${YELLOW}Set chrome as default browser${NC}\n";
 sleep $delay_after_message;
 CHROME=$(ls /usr/share/applications/ | grep "chrome");
 xdg-settings set default-web-browser $CHROME
+sudo sed -i 's|Exec=/usr/bin/google-chrome-stable %U|Exec=/usr/bin/google-chrome-stable --password-store=basic %U|' /usr/share/applications/google-chrome.desktop
 sleep 2;
 printf "${YELLOW}Reboot${NC}\n";
 sleep $delay_after_message;
