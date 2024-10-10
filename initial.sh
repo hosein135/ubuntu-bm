@@ -82,6 +82,7 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https -y
 sudo apt update -y
 sudo apt install code -y
+sed -i 's/"terminal.integrated.fontFamily":.*/"terminal.integrated.fontFamily": "MesloLGS NF",/' ~/.config/Code/User/settings.json
 sleep 2;
 #change git default editor
 printf "${YELLOW}change git default editor to vscode${NC}\n";
