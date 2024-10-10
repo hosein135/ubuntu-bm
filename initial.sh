@@ -82,6 +82,7 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https -y
 sudo apt update -y
 sudo apt install code -y
+sed -i 's|"terminal.integrated.defaultProfile.linux":.*|"terminal.integrated.defaultProfile.linux": "zsh",|' ~/.config/Code/User/settings.json
 sed -i 's/"terminal.integrated.fontFamily":.*/"terminal.integrated.fontFamily": "MesloLGS NF",/' ~/.config/Code/User/settings.json
 sleep 2;
 #change git default editor
